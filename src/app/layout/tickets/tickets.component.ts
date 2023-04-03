@@ -78,7 +78,6 @@ export class TicketsComponent implements OnInit {
   );
 
   ngOnInit(): void {
-    // this.gettickets$.subscribe((e) => console.log(e));
 
     /* Init New Ticket Form */
     this.addNewTicketForm = this.formBuilder.group({
