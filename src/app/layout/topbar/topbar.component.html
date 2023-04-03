@@ -1,0 +1,28 @@
+<header id="page-topbar" class="shadow">
+  <div class="navbar-header d-flex justify-content-between">
+    <div class="d-flex">
+  
+    </div>
+    <!--End d-flex-->
+
+    <div class="me-3" *ngIf="user$ |async as user" routerLink="/layout/profile">
+      <button
+        type="button"
+        class="btn header-item d-flex"
+        ngbDropdownToggle
+        id="page-header-user-dropdown"
+      >
+        <img
+          class="rounded-circle header-profile-user"
+          src="../../../assets/Avatars/avatar.png"
+          alt="Header Avatar"
+        />
+
+        <div class="text-start ms-2" >
+          <span class="d-none d-xl-block ms-1">{{user[0].name}} </span>
+          <span class="d-none d-xl-block ms-1 ">{{user[0].email}} </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</header>
